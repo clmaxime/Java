@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ma.cluzel.annuaire.ContactController"
+            prefHeight="400.0" prefWidth="600.0" >
+
+    <VBox layoutX="20.0" layoutY="20.0" spacing="10.0">
+        <TextField fx:id="prenomField" promptText="Prénom"/>
+        <TextField fx:id="nomField" promptText="Nom"/>
+        <TextField fx:id="numeroTelephoneField" promptText="Numéro de téléphone"/>
+        <HBox spacing="10.0">
+            <Button text="Ajouter" onAction="#addContact"/>
+            <Button text="Supprimer" onAction="#deleteContact"/>
+            <Button text="Rafraîchir" onAction="#refreshContactList"/>
+        </HBox>
+        <ListView fx:id="contactListView" prefHeight="200.0" prefWidth="200.0"/>
+    </VBox>
+</AnchorPane>
